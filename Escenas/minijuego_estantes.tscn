@@ -1,0 +1,316 @@
+[gd_scene load_steps=28 format=3 uid="uid://cefuuc5setnx1"]
+
+[ext_resource type="Texture2D" uid="uid://xkysp5w1p67e" path="res://sprites para interiores/piso4.png" id="1_d20el"]
+[ext_resource type="Script" path="res://Escenas/minijuego_estantes.gd" id="1_k11i7"]
+[ext_resource type="Texture2D" uid="uid://dqtpssq0gk0px" path="res://sprites para interiores/piso3.png" id="2_7vuv2"]
+[ext_resource type="Texture2D" uid="uid://3xl5c28j6e0v" path="res://UI/Thin outline/tile_0000.png" id="3_6k1vs"]
+[ext_resource type="Texture2D" uid="uid://ep0lp3t67xjf" path="res://sprites para interiores/paredamarilla.png" id="4_vhg4a"]
+[ext_resource type="Texture2D" uid="uid://hnrvw3pfu0ts" path="res://sprites para interiores/basurero.png" id="5_wmf6g"]
+[ext_resource type="Texture2D" uid="uid://b1r6xy6hau3x7" path="res://sprites para interiores/estantevacio.png" id="6_oys8f"]
+[ext_resource type="Script" path="res://Escenas/AreaBasurero.gd" id="7_6ujky"]
+[ext_resource type="Texture2D" uid="uid://vlwctdt3lia6" path="res://sprites para interiores/estanteabierto.png" id="7_7st2l"]
+[ext_resource type="Texture2D" uid="uid://dj0vu6aeuaidx" path="res://sprites para interiores/plantitarota2.png" id="8_vk6l4"]
+[ext_resource type="Script" path="res://Escenas/AreaEstante.gd" id="10_fg7lk"]
+[ext_resource type="Texture2D" uid="uid://rc4rsdfbmaa7" path="res://sprites para interiores/calcetin.png" id="10_o08tm"]
+[ext_resource type="Texture2D" uid="uid://dmbj3vcf5wl2c" path="res://sprites para interiores/pantalones.png" id="11_1f25r"]
+[ext_resource type="Texture2D" uid="uid://by6eadrxu5dq0" path="res://sprites para interiores/polera.png" id="12_82viu"]
+[ext_resource type="Script" path="res://Escenas/areaArmario.gd" id="12_sgqrg"]
+[ext_resource type="Texture2D" uid="uid://wmu6nf8osq3x" path="res://sprites para interiores/libro1.png" id="13_odt5v"]
+[ext_resource type="PackedScene" uid="uid://beqra4rdbbpux" path="res://Escenas/objetomovible2.tscn" id="14_nabs6"]
+[ext_resource type="Texture2D" uid="uid://cr0dxqb5wty65" path="res://sprites para interiores/libro2.png" id="14_vpfk5"]
+[ext_resource type="Texture2D" uid="uid://dhqj5dbfakdbm" path="res://sprites para interiores/paper_bag.png" id="15_gmpj2"]
+[ext_resource type="Texture2D" uid="uid://x5eb06un2ivl" path="res://sprites para interiores/receipt.png" id="16_vgawf"]
+[ext_resource type="Texture2D" uid="uid://scudfxjphy0q" path="res://sprites para interiores/tazarota.png" id="17_eqf2f"]
+[ext_resource type="Texture2D" uid="uid://ck58g3woafift" path="res://sprites para interiores/vasitoderramado.png" id="18_ikquj"]
+[ext_resource type="Texture2D" uid="uid://0ktn8cbfqs6n" path="res://sprites para interiores/motojuguete2.png" id="19_6eid1"]
+[ext_resource type="Texture2D" uid="uid://b45265q38vlcn" path="res://sprites para interiores/flechita.png" id="19_on0b8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pgyk"]
+size = Vector2(31.875, 31.8757)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egkh4"]
+size = Vector2(59.4286, 47.8572)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8u4ji"]
+size = Vector2(59.1429, 23.7143)
+
+[node name="Minijuego_Estantes" type="Node2D"]
+position = Vector2(136, 0)
+script = ExtResource("1_k11i7")
+
+[node name="Piso1" type="Sprite2D" parent="."]
+position = Vector2(-21.9993, 661.001)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("1_d20el")
+
+[node name="Piso7" type="Sprite2D" parent="."]
+position = Vector2(636.001, 661.001)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("1_d20el")
+
+[node name="Piso9" type="Sprite2D" parent="."]
+position = Vector2(1294, 661.001)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("1_d20el")
+
+[node name="Piso2" type="Sprite2D" parent="."]
+position = Vector2(307.001, 661.001)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("2_7vuv2")
+
+[node name="Piso8" type="Sprite2D" parent="."]
+position = Vector2(965.001, 661.001)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("2_7vuv2")
+
+[node name="Piso3" type="Sprite2D" parent="."]
+position = Vector2(-21.9993, 997)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("1_d20el")
+
+[node name="Piso10" type="Sprite2D" parent="."]
+position = Vector2(636.001, 997)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("1_d20el")
+
+[node name="Piso11" type="Sprite2D" parent="."]
+position = Vector2(1294, 997)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("1_d20el")
+
+[node name="Piso4" type="Sprite2D" parent="."]
+position = Vector2(307.001, 997)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("2_7vuv2")
+
+[node name="Piso12" type="Sprite2D" parent="."]
+position = Vector2(965.001, 997)
+rotation = 1.5708
+scale = Vector2(7, 7)
+texture = ExtResource("2_7vuv2")
+
+[node name="Tile0000" type="Sprite2D" parent="."]
+position = Vector2(1625, 902)
+scale = Vector2(8, 11.0625)
+texture = ExtResource("3_6k1vs")
+
+[node name="Basurero" type="Sprite2D" parent="Tile0000"]
+position = Vector2(2.125, -1.17514)
+scale = Vector2(0.375, 0.271186)
+texture = ExtResource("5_wmf6g")
+
+[node name="AreaBasurero" type="Area2D" parent="."]
+position = Vector2(1625, 902)
+scale = Vector2(8, 11.0625)
+collision_layer = 2
+script = ExtResource("7_6ujky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBasurero"]
+position = Vector2(-0.0625, -0.118645)
+shape = SubResource("RectangleShape2D_8pgyk")
+
+[node name="Paredamarilla" type="Sprite2D" parent="."]
+position = Vector2(146, 61)
+scale = Vector2(14, 9)
+texture = ExtResource("4_vhg4a")
+
+[node name="Paredamarilla2" type="Sprite2D" parent="."]
+position = Vector2(793, 61)
+scale = Vector2(14, 9)
+texture = ExtResource("4_vhg4a")
+
+[node name="Paredamarilla3" type="Sprite2D" parent="."]
+position = Vector2(1127, 61)
+scale = Vector2(14, 9)
+texture = ExtResource("4_vhg4a")
+
+[node name="Estantevacio" type="Sprite2D" parent="."]
+position = Vector2(1135, 392)
+scale = Vector2(7, 7)
+texture = ExtResource("6_oys8f")
+
+[node name="AreaEstante" type="Area2D" parent="."]
+position = Vector2(1135, 392)
+scale = Vector2(7, 7)
+collision_layer = 2
+script = ExtResource("10_fg7lk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaEstante"]
+position = Vector2(-0.857101, 5.92857)
+shape = SubResource("RectangleShape2D_egkh4")
+
+[node name="Estanteabierto" type="Sprite2D" parent="."]
+position = Vector2(452, 376)
+scale = Vector2(7, 7)
+texture = ExtResource("7_7st2l")
+
+[node name="AreaArmario" type="Area2D" parent="."]
+position = Vector2(452, 376)
+scale = Vector2(7, 7)
+collision_layer = 2
+script = ExtResource("12_sgqrg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaArmario"]
+position = Vector2(0, 0.285713)
+shape = SubResource("RectangleShape2D_8u4ji")
+
+[node name="Plantitarota2" type="Sprite2D" parent="."]
+position = Vector2(318, 133)
+scale = Vector2(6, 6)
+texture = ExtResource("8_vk6l4")
+
+[node name="Objetomovible" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(36, 764)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible2" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(660, 996)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible3" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(-71, 564)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible4" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(391, 780)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible5" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(87, 943)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible6" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(888, 793)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible7" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(1176, 935)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible8" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(1216, 158)
+scale = Vector2(3, 3)
+
+[node name="Objetomovible9" parent="." instance=ExtResource("14_nabs6")]
+position = Vector2(543, 121)
+scale = Vector2(3, 3)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(821, 447)
+zoom = Vector2(1, 0.85)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -137.0
+offset_top = -204.0
+offset_right = 1793.0
+offset_bottom = 1113.0
+color = Color(0.992157, 0.992157, 0.588235, 1)
+
+[node name="Estanteabierto2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(385, 415)
+scale = Vector2(4, 4)
+texture = ExtResource("7_7st2l")
+
+[node name="Estantevacio2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(992, 415)
+scale = Vector2(4, 4)
+texture = ExtResource("6_oys8f")
+
+[node name="Basurero" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1598, 415)
+scale = Vector2(4, 4)
+texture = ExtResource("5_wmf6g")
+
+[node name="Tile0001" type="Sprite2D" parent="ColorRect"]
+position = Vector2(382, 954)
+scale = Vector2(10, 10)
+texture = ExtResource("3_6k1vs")
+
+[node name="Tile0002" type="Sprite2D" parent="ColorRect"]
+position = Vector2(979, 954)
+scale = Vector2(10, 10)
+texture = ExtResource("3_6k1vs")
+
+[node name="Tile0003" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1574, 954)
+scale = Vector2(10, 10)
+texture = ExtResource("3_6k1vs")
+
+[node name="Calcetin" type="Sprite2D" parent="ColorRect"]
+position = Vector2(438, 902)
+scale = Vector2(3, 3)
+texture = ExtResource("10_o08tm")
+
+[node name="Pantalones" type="Sprite2D" parent="ColorRect"]
+position = Vector2(319, 887)
+scale = Vector2(3, 3)
+texture = ExtResource("11_1f25r")
+
+[node name="Polera" type="Sprite2D" parent="ColorRect"]
+position = Vector2(376, 985)
+scale = Vector2(3, 3)
+texture = ExtResource("12_82viu")
+
+[node name="Libro1" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1027, 906)
+scale = Vector2(3, 3)
+texture = ExtResource("13_odt5v")
+
+[node name="Libro2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(931, 912)
+scale = Vector2(3, 3)
+texture = ExtResource("14_vpfk5")
+
+[node name="PaperBag" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1650, 896)
+scale = Vector2(3, 3)
+texture = ExtResource("15_gmpj2")
+
+[node name="Receipt" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1632, 1007)
+scale = Vector2(3, 3)
+texture = ExtResource("16_vgawf")
+
+[node name="Tazarota" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1518, 902)
+scale = Vector2(3, 3)
+texture = ExtResource("17_eqf2f")
+
+[node name="Vasitoderramado" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1533, 1002)
+scale = Vector2(3, 3)
+texture = ExtResource("18_ikquj")
+
+[node name="Motojuguete2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(980, 986)
+scale = Vector2(3, 3)
+texture = ExtResource("19_6eid1")
+
+[node name="Flechita" type="Sprite2D" parent="ColorRect"]
+position = Vector2(380, 686)
+scale = Vector2(3, 3)
+texture = ExtResource("19_on0b8")
+
+[node name="Flechita2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(985, 686)
+scale = Vector2(3, 3)
+texture = ExtResource("19_on0b8")
+
+[node name="Flechita3" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1575, 686)
+scale = Vector2(3, 3)
+texture = ExtResource("19_on0b8")
+
+[connection signal="ObjetoEntro" from="AreaBasurero" to="." method="_on_area_basurero_objeto_entro"]
+[connection signal="ObjetoEntro" from="AreaEstante" to="." method="_on_area_estante_objeto_entro"]
+[connection signal="ObjetoEntro" from="AreaArmario" to="." method="_on_area_armario_objeto_entro"]

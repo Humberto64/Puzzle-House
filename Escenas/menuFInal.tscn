@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://brjndd0ripngm"]
+
+[ext_resource type="Script" path="res://menuFinal.gd" id="1_rr2mj"]
+[ext_resource type="Texture2D" uid="uid://cg74i8b6m04bd" path="res://UI/2x/menuGrid.png" id="2_6oww8"]
+[ext_resource type="Texture2D" uid="uid://klrv4jkpmvvl" path="res://UI/Background.png" id="2_em5ij"]
+[ext_resource type="Texture2D" uid="uid://ceaa03cb3f683" path="res://UI/2x/cross.png" id="3_3i5n4"]
+[ext_resource type="Texture2D" uid="uid://cjb6f31yo33bu" path="res://UI/Thin outline/tile_0001.png" id="3_k8lh8"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rr2mj")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+offset_right = 1913.0
+offset_bottom = 1107.0
+texture = ExtResource("2_em5ij")
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 40.0
+offset_right = 1758.0
+offset_bottom = 1078.0
+texture = ExtResource("3_k8lh8")
+
+[node name="Label" type="Label" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 124.0
+offset_right = 1112.0
+offset_bottom = 289.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "Ganaste
+"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 388.0
+offset_right = 1136.0
+offset_bottom = 506.0
+theme_override_font_sizes/font_size = 80
+text = "Menu Principal"
+icon = ExtResource("2_6oww8")
+alignment = 0
+
+[node name="Button2" type="Button" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 560.0
+offset_right = 1110.0
+offset_bottom = 678.0
+theme_override_font_sizes/font_size = 80
+text = "Salir"
+icon = ExtResource("3_3i5n4")
+alignment = 0
+
+[connection signal="pressed" from="ColorRect/TextureRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/Button2" to="." method="_on_button_2_pressed"]

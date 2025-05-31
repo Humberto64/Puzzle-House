@@ -1,0 +1,187 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjpmr14j8dtli"]
+
+[ext_resource type="Script" path="res://Menus/menu_scene.gd" id="1_wus2t"]
+[ext_resource type="Texture2D" uid="uid://klrv4jkpmvvl" path="res://UI/Background.png" id="2_socxc"]
+[ext_resource type="Texture2D" uid="uid://cjb6f31yo33bu" path="res://UI/Thin outline/tile_0001.png" id="3_3qcda"]
+[ext_resource type="Texture2D" uid="uid://c1ucsle0thee8" path="res://UI/Thin outline/panel1.png" id="4_hpnci"]
+[ext_resource type="Texture2D" uid="uid://cb7sxgbhp02l2" path="res://UI/Puzzle_House-removebg-preview.png" id="5_scdj5"]
+
+[sub_resource type="Theme" id="Theme_hekjy"]
+
+[node name="Menu Scene" type="Node2D"]
+script = ExtResource("1_wus2t")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1928.0
+offset_bottom = 1090.0
+texture = ExtResource("2_socxc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 566.0
+offset_top = 395.0
+offset_right = 1421.0
+offset_bottom = 1075.0
+texture = ExtResource("3_3qcda")
+
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 28.0
+offset_right = 818.0
+offset_bottom = 673.0
+theme = SubResource("Theme_hekjy")
+
+[node name="Botones" type="VBoxContainer" parent="TextureRect/CenterContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/CenterContainer/Botones"]
+layout_mode = 2
+texture = ExtResource("4_hpnci")
+expand_mode = 5
+
+[node name="Jugar" type="Button" parent="TextureRect/CenterContainer/Botones/TextureRect"]
+layout_mode = 2
+anchor_top = -0.035
+anchor_bottom = -0.035
+offset_left = 38.0
+offset_top = 16.6667
+offset_right = 367.0
+offset_bottom = 121.667
+theme_override_font_sizes/font_size = 50
+text = "Jugar"
+flat = true
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/CenterContainer/Botones"]
+layout_mode = 2
+texture = ExtResource("4_hpnci")
+expand_mode = 5
+
+[node name="Opciones" type="Button" parent="TextureRect/CenterContainer/Botones/TextureRect2"]
+layout_mode = 2
+offset_left = 55.0
+offset_top = 28.0
+offset_right = 351.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 50
+text = "Opciones"
+flat = true
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/CenterContainer/Botones"]
+layout_mode = 2
+texture = ExtResource("4_hpnci")
+expand_mode = 5
+
+[node name="Creditos" type="Button" parent="TextureRect/CenterContainer/Botones/TextureRect3"]
+layout_mode = 2
+offset_left = 43.0
+offset_top = 10.0
+offset_right = 354.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 50
+text = "Creditos"
+flat = true
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect/CenterContainer/Botones"]
+layout_mode = 2
+texture = ExtResource("4_hpnci")
+expand_mode = 5
+
+[node name="Salir" type="Button" parent="TextureRect/CenterContainer/Botones/TextureRect4"]
+layout_mode = 2
+offset_left = 65.0
+offset_top = 34.0
+offset_right = 340.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+flat = true
+
+[node name="Menudeopciones" type="VBoxContainer" parent="TextureRect/CenterContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/CenterContainer/Menudeopciones"]
+layout_mode = 2
+texture = ExtResource("4_hpnci")
+expand_mode = 5
+
+[node name="Atrás" type="Button" parent="TextureRect/CenterContainer/Menudeopciones/TextureRect"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+offset_left = -15.0
+offset_top = 61.0
+offset_right = 685.0
+offset_bottom = 172.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "Volver atrás"
+flat = true
+
+[node name="PantallaCompleta" type="CheckBox" parent="TextureRect/CenterContainer/Menudeopciones"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 75
+text = "Pantalla Completa"
+
+[node name="Volslider" type="HSlider" parent="TextureRect/CenterContainer/Menudeopciones"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_constants/grabber_offset = 0
+max_value = 1.0
+step = 0.001
+
+[node name="Label" type="Label" parent="TextureRect/CenterContainer/Menudeopciones/Volslider"]
+custom_minimum_size = Vector2(680, 55)
+layout_mode = 0
+offset_left = 3.0
+offset_top = -13.0
+offset_right = 683.0
+offset_bottom = 77.0
+theme_override_font_sizes/font_size = 65
+text = "Volumen"
+horizontal_alignment = 1
+
+[node name="Creditosmenu" type="VBoxContainer" parent="TextureRect/CenterContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Names" type="Label" parent="TextureRect/CenterContainer/Creditosmenu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Hecho por 
+Estudiantes UPSA"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/CenterContainer/Creditosmenu"]
+layout_mode = 2
+texture = ExtResource("4_hpnci")
+expand_mode = 5
+
+[node name="Atrás" type="Button" parent="TextureRect/CenterContainer/Creditosmenu/TextureRect"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+offset_left = 73.0
+offset_top = 62.0
+offset_right = 573.0
+offset_bottom = 173.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 75
+text = "Volver atrás"
+flat = true
+
+[node name="PuzzleHouse-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(972.193, 220.75)
+scale = Vector2(1.27941, 1.27941)
+texture = ExtResource("5_scdj5")
+
+[connection signal="pressed" from="TextureRect/CenterContainer/Botones/TextureRect/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/Botones/TextureRect2/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/Botones/TextureRect3/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/Botones/TextureRect4/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/Menudeopciones/TextureRect/Atrás" to="." method="_on_atrás_pressed"]
+[connection signal="toggled" from="TextureRect/CenterContainer/Menudeopciones/PantallaCompleta" to="." method="_on_pantalla_completa_toggled"]
+[connection signal="value_changed" from="TextureRect/CenterContainer/Menudeopciones/Volslider" to="." method="_on_vol_slider_value_changed"]
+[connection signal="pressed" from="TextureRect/CenterContainer/Creditosmenu/TextureRect/Atrás" to="." method="_on_atrás_pressed"]

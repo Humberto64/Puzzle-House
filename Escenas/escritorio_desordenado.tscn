@@ -1,0 +1,202 @@
+[gd_scene load_steps=24 format=3 uid="uid://b0mts7t2gwtga"]
+
+[ext_resource type="Texture2D" uid="uid://xkysp5w1p67e" path="res://sprites para interiores/piso4.png" id="1_ct7l1"]
+[ext_resource type="Script" path="res://Escenas/escritorio_desordenado.gd" id="1_rde0x"]
+[ext_resource type="Texture2D" uid="uid://dqtpssq0gk0px" path="res://sprites para interiores/piso3.png" id="2_8cfv1"]
+[ext_resource type="Texture2D" uid="uid://6sx0vtrou6h5" path="res://sprites para interiores/silla1.png" id="3_20gkb"]
+[ext_resource type="Texture2D" uid="uid://lamueu38ivrl" path="res://sprites para interiores/alfombra3.png" id="3_g4abs"]
+[ext_resource type="Texture2D" uid="uid://cqiffxrb2sxp8" path="res://sprites para interiores/soft_drink_red.png" id="4_miha5"]
+[ext_resource type="Texture2D" uid="uid://55p45u0k3v4w" path="res://sprites para interiores/banana.png" id="5_kytvv"]
+[ext_resource type="Texture2D" uid="uid://dr0j2s6a47frv" path="res://sprites para interiores/rubber_ducktopus.png" id="6_h8jaa"]
+[ext_resource type="Texture2D" uid="uid://ciotvcm86bvtk" path="res://sprites para interiores/escritorio.png" id="7_vie6v"]
+[ext_resource type="Texture2D" uid="uid://d8f7hpn35jc7" path="res://sprites para interiores/marshmallows.png" id="8_bypc4"]
+[ext_resource type="Texture2D" uid="uid://dhylirpdynd2x" path="res://sprites para interiores/ball_pen.png" id="9_gq55h"]
+[ext_resource type="Texture2D" uid="uid://c868yj1hihaue" path="res://sprites para interiores/eraser.png" id="10_2c1pa"]
+[ext_resource type="Texture2D" uid="uid://cr0dxqb5wty65" path="res://sprites para interiores/libro2.png" id="11_irorq"]
+[ext_resource type="Texture2D" uid="uid://dncv30d1wcnlx" path="res://sprites para interiores/glue.png" id="12_oworg"]
+[ext_resource type="Texture2D" uid="uid://bxsobfsxrdwlv" path="res://sprites para interiores/scissors.png" id="13_2jqap"]
+[ext_resource type="Texture2D" uid="uid://g7ehxfrybbs" path="res://sprites para interiores/glue_stick.png" id="14_wuy0o"]
+[ext_resource type="Texture2D" uid="uid://x5eb06un2ivl" path="res://sprites para interiores/receipt.png" id="15_1m60x"]
+[ext_resource type="Texture2D" uid="uid://c8rumg13jkv7k" path="res://sprites para interiores/bubble_gum.png" id="16_35mg4"]
+[ext_resource type="Texture2D" uid="uid://fhgckq7rs5aq" path="res://sprites para interiores/green_apple.png" id="17_4h8d7"]
+[ext_resource type="Texture2D" uid="uid://pprwccgnhhn5" path="res://sprites para interiores/potatochip_yellow.png" id="19_4suel"]
+[ext_resource type="Texture2D" uid="uid://dhqj5dbfakdbm" path="res://sprites para interiores/paper_bag.png" id="20_m80uu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipkvt"]
+size = Vector2(91, 43)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxlqa"]
+size = Vector2(138, 117)
+
+[node name="Escritorio_desordenado" type="StaticBody2D"]
+script = ExtResource("1_rde0x")
+
+[node name="Piso20" type="Sprite2D" parent="."]
+position = Vector2(94, 168)
+rotation = 1.5708
+texture = ExtResource("1_ct7l1")
+
+[node name="Piso21" type="Sprite2D" parent="."]
+position = Vector2(188, 168)
+rotation = 1.5708
+texture = ExtResource("1_ct7l1")
+
+[node name="Piso22" type="Sprite2D" parent="."]
+position = Vector2(47, 168)
+rotation = 1.5708
+texture = ExtResource("2_8cfv1")
+
+[node name="Piso23" type="Sprite2D" parent="."]
+position = Vector2(141, 168)
+rotation = 1.5708
+texture = ExtResource("2_8cfv1")
+
+[node name="Piso29" type="Sprite2D" parent="."]
+position = Vector2(94, 216)
+rotation = 1.5708
+texture = ExtResource("1_ct7l1")
+
+[node name="Piso30" type="Sprite2D" parent="."]
+position = Vector2(188, 216)
+rotation = 1.5708
+texture = ExtResource("1_ct7l1")
+
+[node name="Piso31" type="Sprite2D" parent="."]
+position = Vector2(47, 216)
+rotation = 1.5708
+texture = ExtResource("2_8cfv1")
+
+[node name="Piso32" type="Sprite2D" parent="."]
+position = Vector2(141, 216)
+rotation = 1.5708
+texture = ExtResource("2_8cfv1")
+
+[node name="Piso38" type="Sprite2D" parent="."]
+position = Vector2(94, 264)
+rotation = 1.5708
+texture = ExtResource("1_ct7l1")
+
+[node name="Piso39" type="Sprite2D" parent="."]
+position = Vector2(188, 264)
+rotation = 1.5708
+texture = ExtResource("1_ct7l1")
+
+[node name="Piso40" type="Sprite2D" parent="."]
+position = Vector2(47, 264)
+rotation = 1.5708
+texture = ExtResource("2_8cfv1")
+
+[node name="Piso41" type="Sprite2D" parent="."]
+position = Vector2(141, 264)
+rotation = 1.5708
+texture = ExtResource("2_8cfv1")
+
+[node name="Alfombra4" type="Sprite2D" parent="."]
+position = Vector2(144, 231)
+texture = ExtResource("3_g4abs")
+
+[node name="Silla1" type="Sprite2D" parent="."]
+position = Vector2(165, 237)
+texture = ExtResource("3_20gkb")
+
+[node name="SoftDrinkRed2" type="Sprite2D" parent="."]
+position = Vector2(190, 283)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_miha5")
+
+[node name="Banana" type="Sprite2D" parent="."]
+position = Vector2(111, 281)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_kytvv")
+flip_h = true
+
+[node name="RubberDucktopus" type="Sprite2D" parent="."]
+position = Vector2(119, 280)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_h8jaa")
+
+[node name="Escritorio" type="Sprite2D" parent="."]
+position = Vector2(164, 264)
+texture = ExtResource("7_vie6v")
+
+[node name="SoftDrinkRed" type="Sprite2D" parent="."]
+position = Vector2(198, 249)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_miha5")
+
+[node name="Marshmallows" type="Sprite2D" parent="."]
+position = Vector2(103, 205)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_bypc4")
+
+[node name="BallPen" type="Sprite2D" parent="."]
+position = Vector2(145, 259)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_gq55h")
+
+[node name="Eraser" type="Sprite2D" parent="."]
+position = Vector2(188, 261)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("10_2c1pa")
+
+[node name="Libro2" type="Sprite2D" parent="."]
+position = Vector2(65, 270)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_irorq")
+
+[node name="Glue" type="Sprite2D" parent="."]
+position = Vector2(58, 271)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_oworg")
+
+[node name="Scissors" type="Sprite2D" parent="."]
+position = Vector2(65, 228)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_2jqap")
+
+[node name="GlueStick" type="Sprite2D" parent="."]
+position = Vector2(75, 273)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_wuy0o")
+
+[node name="Receipt" type="Sprite2D" parent="."]
+position = Vector2(200, 209)
+rotation = 1.5708
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("15_1m60x")
+
+[node name="BubbleGum" type="Sprite2D" parent="."]
+position = Vector2(92, 196)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_35mg4")
+
+[node name="GreenApple" type="Sprite2D" parent="."]
+position = Vector2(170, 180)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("17_4h8d7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(164.5, 267.5)
+shape = SubResource("RectangleShape2D_ipkvt")
+
+[node name="PotatochipYellow" type="Sprite2D" parent="."]
+position = Vector2(56, 153)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_4suel")
+
+[node name="PaperBag" type="Sprite2D" parent="."]
+position = Vector2(48, 154)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("20_m80uu")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(142, 228.5)
+shape = SubResource("RectangleShape2D_gxlqa")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

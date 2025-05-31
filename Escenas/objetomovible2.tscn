@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://beqra4rdbbpux"]
+
+[ext_resource type="Script" path="res://objetomovible2.gd" id="1_jhwbl"]
+[ext_resource type="Texture2D" uid="uid://55p45u0k3v4w" path="res://sprites para interiores/banana.png" id="2_iy4f1"]
+[ext_resource type="Script" path="res://Escenas/valor.gd" id="3_xesap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o224d"]
+size = Vector2(52, 49)
+
+[node name="Objetomovible" type="Node2D"]
+script = ExtResource("1_jhwbl")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(9, 8)
+scale = Vector2(1.5625, 1.5)
+texture = ExtResource("2_iy4f1")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_xesap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11, 10)
+shape = SubResource("RectangleShape2D_o224d")

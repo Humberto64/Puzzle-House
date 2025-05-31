@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://bw7tm8ckhy44b"]
+
+[ext_resource type="Script" path="res://menu_configuracion.gd" id="1_4gn6o"]
+[ext_resource type="Texture2D" uid="uid://klrv4jkpmvvl" path="res://UI/Background.png" id="2_r6wkm"]
+[ext_resource type="Texture2D" uid="uid://cjb6f31yo33bu" path="res://UI/Thin outline/tile_0001.png" id="3_n6f7y"]
+[ext_resource type="Texture2D" uid="uid://ceaa03cb3f683" path="res://UI/2x/cross.png" id="4_i0y80"]
+[ext_resource type="Texture2D" uid="uid://cg74i8b6m04bd" path="res://UI/2x/menuGrid.png" id="5_t1gfx"]
+[ext_resource type="Texture2D" uid="uid://s176u2n87vgc" path="res://UI/2x/larger.png" id="6_shgwt"]
+
+[sub_resource type="Theme" id="Theme_pr0jm"]
+
+[node name="MenuConfiguracion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4gn6o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1912.0
+offset_bottom = 1092.0
+texture = ExtResource("2_r6wkm")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 58.0
+offset_right = 1521.0
+offset_bottom = 1025.0
+texture = ExtResource("3_n6f7y")
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 826.0
+offset_top = 737.0
+offset_right = 1108.0
+offset_bottom = 883.0
+theme_override_font_sizes/font_size = 80
+text = "Salir"
+icon = ExtResource("4_i0y80")
+
+[node name="Button2" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 364.0
+offset_right = 1324.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 80
+text = "Menu Principal"
+icon = ExtResource("5_t1gfx")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 783.0
+offset_top = 177.0
+offset_right = 1102.0
+offset_bottom = 325.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "Pausa"
+
+[node name="CheckBox" type="CheckBox" parent="TextureRect"]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 535.0
+offset_right = 1389.0
+offset_bottom = 697.0
+theme = SubResource("Theme_pr0jm")
+theme_override_font_sizes/font_size = 80
+text = "Pantalla Completa"
+icon = ExtResource("6_shgwt")
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TextureRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="toggled" from="TextureRect/CheckBox" to="." method="_on_check_box_toggled"]

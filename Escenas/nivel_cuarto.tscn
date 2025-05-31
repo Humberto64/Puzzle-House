@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://k551012woaw7"]
+
+[ext_resource type="Script" path="res://Escenas/nivel_cuarto.gd" id="1_b0ylv"]
+[ext_resource type="PackedScene" uid="uid://dxeo6ve6iiixx" path="res://Escenas/cuarto.tscn" id="1_evdrs"]
+[ext_resource type="PackedScene" uid="uid://3mlc064iqb3h" path="res://Escenas/Cama_desordenada.tscn" id="2_1ei7x"]
+[ext_resource type="PackedScene" uid="uid://b0mts7t2gwtga" path="res://Escenas/escritorio_desordenado.tscn" id="3_ia76b"]
+[ext_resource type="PackedScene" uid="uid://c8honcmjvl2he" path="res://Escenas/Estantes_desordenados.tscn" id="4_c5wyg"]
+[ext_resource type="PackedScene" uid="uid://bdjuuplnwbhx2" path="res://Escenas/player.tscn" id="5_apd0u"]
+
+[node name="Nivel_cuarto" type="Node2D"]
+position = Vector2(215, 51)
+script = ExtResource("1_b0ylv")
+
+[node name="Escenarios" type="Node2D" parent="."]
+
+[node name="Cuarto" parent="Escenarios" instance=ExtResource("1_evdrs")]
+collision_layer = 6
+
+[node name="Cama_desrodenada" parent="Escenarios" instance=ExtResource("2_1ei7x")]
+collision_layer = 2
+
+[node name="Escritorio_desordenado" parent="Escenarios" instance=ExtResource("3_ia76b")]
+collision_layer = 2
+
+[node name="Estantes_Desordenados" parent="Escenarios" instance=ExtResource("4_c5wyg")]
+collision_layer = 2
+
+[node name="Player" parent="." instance=ExtResource("5_apd0u")]
+position = Vector2(-75, 230)
+scale = Vector2(1.3, 1.3)
+collision_mask = 5
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-0.769241, 11.5385)
+scale = Vector2(0.769231, 0.769231)
+zoom = Vector2(4, 4)
+
+[connection signal="accion" from="Player" to="Escenarios/Cama_desrodenada" method="_on_player_accion"]
+[connection signal="accion" from="Player" to="Escenarios/Escritorio_desordenado" method="_on_player_accion"]
+[connection signal="accion" from="Player" to="Escenarios/Estantes_Desordenados" method="_on_player_accion"]

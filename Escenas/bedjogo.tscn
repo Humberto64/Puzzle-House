@@ -1,0 +1,146 @@
+[gd_scene load_steps=20 format=3 uid="uid://hy00au8pg3ld"]
+
+[ext_resource type="Script" path="res://Escenas/bedjogo.gd" id="1_f1ow0"]
+[ext_resource type="Texture2D" uid="uid://cnq84uacv68y1" path="res://sprites para interiores/tile1.png" id="2_tdt20"]
+[ext_resource type="Texture2D" uid="uid://4a07pei5kddm" path="res://sprites para interiores/tile2.png" id="3_2vu7p"]
+[ext_resource type="Texture2D" uid="uid://cvqnwhuqjo8ax" path="res://sprites para interiores/tile3.png" id="4_yimjp"]
+[ext_resource type="Texture2D" uid="uid://bakor0anp0rev" path="res://sprites para interiores/tile4.png" id="5_h1erv"]
+[ext_resource type="Texture2D" uid="uid://coblr26s1dn4p" path="res://sprites para interiores/tile8.png" id="6_2txhi"]
+[ext_resource type="Texture2D" uid="uid://hf03h2ixgk2x" path="res://sprites para interiores/tile7.png" id="7_bvc6o"]
+[ext_resource type="Texture2D" uid="uid://b3hwlnmi8wjjg" path="res://sprites para interiores/tile6.png" id="8_xdudx"]
+[ext_resource type="Texture2D" uid="uid://cxf35ujg5yai5" path="res://sprites para interiores/tile5.png" id="9_4axqk"]
+[ext_resource type="Texture2D" uid="uid://cgupq1fstnhes" path="res://sprites para interiores/tile9.png" id="10_k30ni"]
+[ext_resource type="Texture2D" uid="uid://rh4shhasq5p2" path="res://sprites para interiores/tile10.png" id="11_tsyrq"]
+[ext_resource type="Texture2D" uid="uid://ceuc782u8wg1" path="res://sprites para interiores/tile11.png" id="12_uji6p"]
+[ext_resource type="Texture2D" uid="uid://bp2db47q4nqvo" path="res://sprites para interiores/tile12.png" id="13_q1t0q"]
+[ext_resource type="Texture2D" uid="uid://bwdmjw3i5xf7b" path="res://sprites para interiores/tile15.png" id="14_22rk1"]
+[ext_resource type="Texture2D" uid="uid://chrejcscjiltw" path="res://sprites para interiores/tile14.png" id="15_0s6vt"]
+[ext_resource type="Texture2D" uid="uid://wu3724go1s1r" path="res://img/empty.png" id="16_esg8c"]
+[ext_resource type="Texture2D" uid="uid://cqkxwkppt7ee7" path="res://sprites para interiores/tile13.png" id="16_ts0vt"]
+[ext_resource type="Texture2D" uid="uid://c825b0r7ujwyg" path="res://Escenas/imagendeayuda.png" id="18_mp1ek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eko15"]
+size = Vector2(1000, 1000)
+
+[node name="Principal" type="Area2D"]
+script = ExtResource("1_f1ow0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(500, 500)
+shape = SubResource("RectangleShape2D_eko15")
+
+[node name="Tile1" type="Sprite2D" parent="."]
+position = Vector2(125, 125)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("2_tdt20")
+
+[node name="Tile2" type="Sprite2D" parent="."]
+position = Vector2(375, 125)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("3_2vu7p")
+
+[node name="Tile3" type="Sprite2D" parent="."]
+position = Vector2(625, 125)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("4_yimjp")
+
+[node name="Tile4" type="Sprite2D" parent="."]
+position = Vector2(875, 125)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("5_h1erv")
+
+[node name="Tile5" type="Sprite2D" parent="."]
+position = Vector2(125, 375)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("6_2txhi")
+
+[node name="Tile6" type="Sprite2D" parent="."]
+position = Vector2(375, 375)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("7_bvc6o")
+
+[node name="Tile7" type="Sprite2D" parent="."]
+position = Vector2(625, 375)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("8_xdudx")
+
+[node name="Tile8" type="Sprite2D" parent="."]
+position = Vector2(875, 375)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("9_4axqk")
+
+[node name="Tile9" type="Sprite2D" parent="."]
+position = Vector2(125, 625)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("10_k30ni")
+
+[node name="Tile10" type="Sprite2D" parent="."]
+position = Vector2(375, 625)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("11_tsyrq")
+
+[node name="Tile11" type="Sprite2D" parent="."]
+position = Vector2(625, 625)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("12_uji6p")
+
+[node name="Tile12" type="Sprite2D" parent="."]
+position = Vector2(875, 625)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("13_q1t0q")
+
+[node name="Tile13" type="Sprite2D" parent="."]
+position = Vector2(125, 875)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("14_22rk1")
+
+[node name="Tile14" type="Sprite2D" parent="."]
+position = Vector2(375, 875)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("15_0s6vt")
+
+[node name="Tile15" type="Sprite2D" parent="."]
+position = Vector2(625, 875)
+scale = Vector2(2.403, 2.403)
+texture = ExtResource("16_ts0vt")
+
+[node name="Tile16" type="Sprite2D" parent="."]
+position = Vector2(875, 875)
+texture = ExtResource("16_esg8c")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="VictoryScreen" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VictoryScreen"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 361.0
+offset_right = 718.0
+offset_bottom = 463.0
+theme_override_font_sizes/font_size = 74
+text = "Lo lograste!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/VictoryScreen"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 584.0
+offset_right = 548.0
+offset_bottom = 661.0
+theme_override_font_sizes/font_size = 65
+text = "Salir"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1204.0
+offset_top = 151.0
+offset_right = 1788.0
+offset_bottom = 784.0
+texture = ExtResource("18_mp1ek")

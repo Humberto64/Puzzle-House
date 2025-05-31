@@ -1,0 +1,359 @@
+[gd_scene load_steps=26 format=3 uid="uid://crflal2jai5n3"]
+
+[ext_resource type="Script" path="res://Escenas/main.gd" id="1_iacwk"]
+[ext_resource type="PackedScene" uid="uid://ssngp7vbwa75" path="res://Escenas/DraggableObject.tscn" id="1_sn06i"]
+[ext_resource type="Texture2D" uid="uid://lamueu38ivrl" path="res://sprites para interiores/alfombra3.png" id="3_d6gwo"]
+[ext_resource type="Script" path="res://Escenas/DropZone.gd" id="3_mopct"]
+[ext_resource type="Texture2D" uid="uid://didst2gcckcgg" path="res://sprites para interiores/mochila2.png" id="4_1wle4"]
+[ext_resource type="Texture2D" uid="uid://hnrvw3pfu0ts" path="res://sprites para interiores/basurero.png" id="4_3xag5"]
+[ext_resource type="Script" path="res://Escenas/ObjectGenerator1.gd" id="4_5iflv"]
+[ext_resource type="Texture2D" uid="uid://c3hqn2npahbti" path="res://Escenas/spritesheet.png" id="6_nn2b6"]
+[ext_resource type="Texture2D" uid="uid://cwl6oab7imlo7" path="res://Escenas/spritesheet (1).png" id="7_wcyi3"]
+[ext_resource type="Texture2D" uid="uid://dpbeh7sh0pmv0" path="res://Escenas/escritorio.png" id="9_ek14m"]
+[ext_resource type="Texture2D" uid="uid://bhv53t3gtkdhe" path="res://Escenas/spritesheet (3).png" id="9_fh032"]
+[ext_resource type="Texture2D" uid="uid://xkysp5w1p67e" path="res://sprites para interiores/piso4.png" id="10_ejnmi"]
+[ext_resource type="Texture2D" uid="uid://dqtpssq0gk0px" path="res://sprites para interiores/piso3.png" id="11_w7epj"]
+[ext_resource type="PackedScene" uid="uid://b0mts7t2gwtga" path="res://Escenas/escritorio_desordenado.tscn" id="13_oav22"]
+[ext_resource type="Texture2D" uid="uid://b45265q38vlcn" path="res://sprites para interiores/flechita.png" id="15_jrb47"]
+[ext_resource type="Texture2D" uid="uid://3xl5c28j6e0v" path="res://UI/Thin outline/tile_0000.png" id="16_i7u67"]
+[ext_resource type="Texture2D" uid="uid://bq53svum43a4a" path="res://Escenas/basura.png" id="17_pju0v"]
+[ext_resource type="Texture2D" uid="uid://dy66jw8nuwrnn" path="res://Escenas/Escuela.png" id="18_pqcxv"]
+[ext_resource type="Texture2D" uid="uid://c15whcyf8hw6a" path="res://Escenas/Juguetes.png" id="19_ogq4u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_53c0h"]
+size = Vector2(116, 112)
+
+[sub_resource type="Gradient" id="Gradient_un3nd"]
+offsets = PackedFloat32Array(0, 0.647541)
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_auxlv"]
+gradient = SubResource("Gradient_un3nd")
+
+[sub_resource type="Curve" id="Curve_qt8nl"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0879121), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ylbwj"]
+curve = SubResource("Curve_qt8nl")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hkplb"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 20.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_ylbwj")
+color = Color(1, 1, 0, 1)
+color_ramp = SubResource("GradientTexture1D_auxlv")
+
+[node name="MAIN" type="Node2D"]
+script = ExtResource("1_iacwk")
+
+[node name="DragContainer" parent="." instance=ExtResource("1_sn06i")]
+script = null
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_mopct")
+
+[node name="Icon" type="Sprite2D" parent="Area2D"]
+show_behind_parent = true
+position = Vector2(-173, -183)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_1wle4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-175, -182)
+shape = SubResource("RectangleShape2D_53c0h")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Area2D"]
+position = Vector2(-175, -182)
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_hkplb")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource("3_mopct")
+zone_id = 1
+
+[node name="Icon2" type="Sprite2D" parent="Area2D2"]
+show_behind_parent = true
+position = Vector2(2, -178)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_d6gwo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(2, -178)
+shape = SubResource("RectangleShape2D_53c0h")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Area2D2"]
+position = Vector2(2, -178)
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_hkplb")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+
+[node name="Area2D3" type="Area2D" parent="."]
+script = ExtResource("3_mopct")
+zone_id = 2
+
+[node name="Icon" type="Sprite2D" parent="Area2D3"]
+show_behind_parent = true
+position = Vector2(171.125, -178.5)
+texture = ExtResource("4_3xag5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(171.125, -178.5)
+shape = SubResource("RectangleShape2D_53c0h")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Area2D3"]
+position = Vector2(171.125, -178.5)
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_hkplb")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+
+[node name="ObjectGenerator" type="Node2D" parent="."]
+script = ExtResource("4_5iflv")
+sprite_sheet = ExtResource("7_wcyi3")
+
+[node name="ObjectGenerator2" type="Node2D" parent="."]
+script = ExtResource("4_5iflv")
+sprite_sheet = ExtResource("9_fh032")
+zone_id = 1
+
+[node name="ObjectGenerator3" type="Node2D" parent="."]
+script = ExtResource("4_5iflv")
+sprite_sheet = ExtResource("6_nn2b6")
+zone_id = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Piso5" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(380, 358)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("10_ejnmi")
+
+[node name="Piso6" type="Sprite2D" parent="."]
+position = Vector2(-4, 358)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso7" type="Sprite2D" parent="."]
+position = Vector2(764, 358)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso4" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-388, 358)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("10_ejnmi")
+
+[node name="Piso3" type="Sprite2D" parent="."]
+position = Vector2(-772, 358)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso8" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(380, -27)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("10_ejnmi")
+
+[node name="Piso9" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-4, -27)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso10" type="Sprite2D" parent="."]
+position = Vector2(764, -27)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso11" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-388, -27)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("10_ejnmi")
+
+[node name="Piso12" type="Sprite2D" parent="."]
+position = Vector2(-772, -27)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso13" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(380, -411)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("10_ejnmi")
+
+[node name="Piso14" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-4, -411)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso15" type="Sprite2D" parent="."]
+position = Vector2(764, -411)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Piso16" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(-388, -411)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("10_ejnmi")
+
+[node name="Piso17" type="Sprite2D" parent="."]
+position = Vector2(-772, -411)
+rotation = -1.5708
+scale = Vector2(8, 8)
+texture = ExtResource("11_w7epj")
+
+[node name="Escritorio" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(6, 66)
+scale = Vector2(9.76563, 10.4271)
+texture = ExtResource("9_ek14m")
+
+[node name="Escritorio_desordenado" parent="Escritorio" instance=ExtResource("13_oav22")]
+
+[node name="WinScreen" type="CanvasLayer" parent="."]
+visible = false
+follow_viewport_enabled = true
+
+[node name="Panel" type="Panel" parent="WinScreen"]
+anchors_preset = -1
+anchor_left = -0.499
+anchor_top = -0.492
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.151978
+offset_top = -0.18399
+offset_right = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="WinScreen/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 437.0
+offset_top = 140.0
+offset_right = -434.0
+offset_bottom = -420.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "GANASTE
+"
+
+[node name="Button" type="Button" parent="WinScreen/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 506.0
+offset_top = 305.0
+offset_right = -492.0
+offset_bottom = -278.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "SALIR"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -973.0
+offset_top = -600.0
+offset_right = 962.0
+offset_bottom = 557.0
+color = Color(0.992157, 0.992157, 0.588235, 1)
+
+[node name="Mochila2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(416, 207)
+scale = Vector2(4, 4)
+texture = ExtResource("4_1wle4")
+
+[node name="Alfombra3" type="Sprite2D" parent="ColorRect"]
+position = Vector2(966, 248)
+scale = Vector2(4, 4)
+texture = ExtResource("3_d6gwo")
+
+[node name="Basurero" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1582, 261)
+scale = Vector2(4, 4)
+texture = ExtResource("4_3xag5")
+
+[node name="Flechita" type="Sprite2D" parent="ColorRect"]
+position = Vector2(413, 565)
+scale = Vector2(5, 5)
+texture = ExtResource("15_jrb47")
+
+[node name="Flechita2" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1564, 570)
+scale = Vector2(5, 5)
+texture = ExtResource("15_jrb47")
+
+[node name="Flechita3" type="Sprite2D" parent="ColorRect"]
+position = Vector2(968, 562)
+scale = Vector2(5, 5)
+texture = ExtResource("15_jrb47")
+
+[node name="Tile0000" type="Sprite2D" parent="ColorRect"]
+position = Vector2(409, 897)
+scale = Vector2(9, 9)
+texture = ExtResource("16_i7u67")
+
+[node name="Tile0001" type="Sprite2D" parent="ColorRect"]
+position = Vector2(974, 899)
+scale = Vector2(9, 9)
+texture = ExtResource("16_i7u67")
+
+[node name="Tile0002" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1574, 907)
+scale = Vector2(9, 9)
+texture = ExtResource("16_i7u67")
+
+[node name="Basura" type="Sprite2D" parent="ColorRect"]
+position = Vector2(1568, 909)
+scale = Vector2(1.66406, 1.66406)
+texture = ExtResource("17_pju0v")
+
+[node name="Escuela" type="Sprite2D" parent="ColorRect"]
+position = Vector2(414.536, 898.5)
+scale = Vector2(1.69048, 1.69048)
+texture = ExtResource("18_pqcxv")
+
+[node name="Juguetes" type="Sprite2D" parent="ColorRect"]
+position = Vector2(976.25, 900.75)
+scale = Vector2(1.64961, 1.64961)
+texture = ExtResource("19_ogq4u")
+
+[connection signal="pressed" from="WinScreen/Panel/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,230 @@
+[gd_scene load_steps=24 format=3 uid="uid://3mlc064iqb3h"]
+
+[ext_resource type="Script" path="res://Escenas/cama_desordenada.gd" id="1_a1h3n"]
+[ext_resource type="Texture2D" uid="uid://ep0lp3t67xjf" path="res://sprites para interiores/paredamarilla.png" id="1_hoyli"]
+[ext_resource type="Texture2D" uid="uid://xkysp5w1p67e" path="res://sprites para interiores/piso4.png" id="2_e48ag"]
+[ext_resource type="Texture2D" uid="uid://dqtpssq0gk0px" path="res://sprites para interiores/piso3.png" id="3_4parh"]
+[ext_resource type="Texture2D" uid="uid://lamueu38ivrl" path="res://sprites para interiores/alfombra3.png" id="4_ixwgw"]
+[ext_resource type="Texture2D" uid="uid://cdq16haxmuwb" path="res://sprites para interiores/velador1.png" id="5_nwe6e"]
+[ext_resource type="Texture2D" uid="uid://dwwjg03fv57mk" path="res://sprites para interiores/relojdepared.png" id="6_3u0c4"]
+[ext_resource type="Texture2D" uid="uid://bk3b5trsdliuu" path="res://sprites para interiores/estanteflotante2.png" id="7_kv2fb"]
+[ext_resource type="Texture2D" uid="uid://uqswwj2307r3" path="res://sprites para interiores/plantitarota.png" id="8_ltpnu"]
+[ext_resource type="Texture2D" uid="uid://x7gmbfgt2sh1" path="res://sprites para interiores/pelota1.png" id="8_nm8we"]
+[ext_resource type="Texture2D" uid="uid://bfc7ktexp1n6u" path="res://sprites para interiores/camarojadesordenada.png" id="9_dxsam"]
+[ext_resource type="Texture2D" uid="uid://rc4rsdfbmaa7" path="res://sprites para interiores/calcetin.png" id="10_1y27w"]
+[ext_resource type="Texture2D" uid="uid://ce0wp265x1nve" path="res://sprites para interiores/potatochip_blue.png" id="11_ll8gf"]
+[ext_resource type="Texture2D" uid="uid://dilon4agnru0t" path="res://sprites para interiores/potatochip_green.png" id="12_p07in"]
+[ext_resource type="Texture2D" uid="uid://gdyjjndy6ww" path="res://sprites para interiores/candy_bar.png" id="13_jg8jr"]
+[ext_resource type="Texture2D" uid="uid://by6eadrxu5dq0" path="res://sprites para interiores/polera.png" id="14_fwsbw"]
+[ext_resource type="Texture2D" uid="uid://ea743cckl5e7" path="res://sprites para interiores/watermelon2.png" id="15_l4mer"]
+[ext_resource type="Texture2D" uid="uid://cbgsfjosikev2" path="res://sprites para interiores/motojuguete.png" id="16_ucove"]
+[ext_resource type="Texture2D" uid="uid://0ktn8cbfqs6n" path="res://sprites para interiores/motojuguete2.png" id="17_5vf78"]
+[ext_resource type="Texture2D" uid="uid://dfgbklfx8ebv2" path="res://sprites para interiores/mochila3.png" id="19_h18io"]
+[ext_resource type="Texture2D" uid="uid://dmbj3vcf5wl2c" path="res://sprites para interiores/pantalones.png" id="20_fa1mk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsln0"]
+size = Vector2(70, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1lbj3"]
+size = Vector2(106, 110)
+
+[node name="Cama_desrodenada" type="StaticBody2D"]
+script = ExtResource("1_a1h3n")
+
+[node name="Paredamarilla7" type="Sprite2D" parent="."]
+position = Vector2(-141, 0)
+texture = ExtResource("1_hoyli")
+
+[node name="Paredamarilla8" type="Sprite2D" parent="."]
+position = Vector2(-188, 0)
+texture = ExtResource("1_hoyli")
+
+[node name="Piso4" type="Sprite2D" parent="."]
+position = Vector2(-93, 72)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Piso17" type="Sprite2D" parent="."]
+position = Vector2(-93, 120)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Piso26" type="Sprite2D" parent="."]
+position = Vector2(-93, 168)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Piso5" type="Sprite2D" parent="."]
+position = Vector2(-140, 72)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso6" type="Sprite2D" parent="."]
+position = Vector2(-187, 72)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Piso16" type="Sprite2D" parent="."]
+position = Vector2(-140, 120)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso18" type="Sprite2D" parent="."]
+position = Vector2(-187, 120)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Piso25" type="Sprite2D" parent="."]
+position = Vector2(-140, 168)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso27" type="Sprite2D" parent="."]
+position = Vector2(-187, 168)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Alfombra4" type="Sprite2D" parent="."]
+position = Vector2(-153, 111)
+texture = ExtResource("4_ixwgw")
+
+[node name="Velador1" type="Sprite2D" parent="."]
+position = Vector2(-194, 51)
+texture = ExtResource("5_nwe6e")
+
+[node name="Relojdepared" type="Sprite2D" parent="."]
+position = Vector2(-136, -12)
+texture = ExtResource("6_3u0c4")
+
+[node name="Estanteflotante2" type="Sprite2D" parent="."]
+position = Vector2(-188, -5)
+texture = ExtResource("7_kv2fb")
+
+[node name="Piso3" type="Sprite2D" parent="."]
+position = Vector2(-47, 72)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso15" type="Sprite2D" parent="."]
+position = Vector2(-47, 120)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso24" type="Sprite2D" parent="."]
+position = Vector2(-47, 168)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso33" type="Sprite2D" parent="."]
+position = Vector2(-47, 216)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso34" type="Sprite2D" parent="."]
+position = Vector2(-140, 216)
+rotation = 1.5708
+texture = ExtResource("3_4parh")
+
+[node name="Piso35" type="Sprite2D" parent="."]
+position = Vector2(-93, 216)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Piso36" type="Sprite2D" parent="."]
+position = Vector2(-187, 216)
+rotation = 1.5708
+texture = ExtResource("2_e48ag")
+
+[node name="Paredamarilla4" type="Sprite2D" parent="."]
+position = Vector2(-94, 0)
+texture = ExtResource("1_hoyli")
+
+[node name="Pelota1" type="Sprite2D" parent="."]
+position = Vector2(-66, 61)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("8_nm8we")
+
+[node name="Plantitarota" type="Sprite2D" parent="."]
+position = Vector2(-88, 52)
+texture = ExtResource("8_ltpnu")
+
+[node name="Camarojadesordenada" type="Sprite2D" parent="."]
+position = Vector2(-152, 56)
+texture = ExtResource("9_dxsam")
+
+[node name="Calcetin2" type="Sprite2D" parent="."]
+position = Vector2(-111, 92)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_1y27w")
+
+[node name="PotatochipBlue" type="Sprite2D" parent="."]
+position = Vector2(-182, 91)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_ll8gf")
+
+[node name="Calcetin" type="Sprite2D" parent="."]
+position = Vector2(-138, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_1y27w")
+
+[node name="PotatochipGreen" type="Sprite2D" parent="."]
+position = Vector2(-194, 105)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_p07in")
+
+[node name="CandyBar" type="Sprite2D" parent="."]
+position = Vector2(-160, 53)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_jg8jr")
+
+[node name="Polera" type="Sprite2D" parent="."]
+position = Vector2(-82, 121)
+rotation = -1.5708
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("14_fwsbw")
+
+[node name="Watermelon2" type="Sprite2D" parent="."]
+position = Vector2(-134, 140)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("15_l4mer")
+
+[node name="Watermelon3" type="Sprite2D" parent="."]
+position = Vector2(-165, 169)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("15_l4mer")
+
+[node name="Motojuguete" type="Sprite2D" parent="."]
+position = Vector2(-113, 202)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("16_ucove")
+flip_h = true
+
+[node name="Motojuguete2" type="Sprite2D" parent="."]
+position = Vector2(-136, 192)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("17_5vf78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-92, 52)
+shape = SubResource("RectangleShape2D_dsln0")
+
+[node name="Mochila3" type="Sprite2D" parent="."]
+position = Vector2(-31, 201)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_h18io")
+
+[node name="Pantalones" type="Sprite2D" parent="."]
+position = Vector2(-22, 161)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("20_fa1mk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-157, 104)
+shape = SubResource("RectangleShape2D_1lbj3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
